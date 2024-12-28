@@ -3,6 +3,7 @@ import {
 } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import AddJob from "../pages/AddJob/AddJob";
+import AllJob from "../pages/AllJob/AllJob";
 import Home from "../pages/Home/Home";
 import JobApply from "../pages/JobApply/JobApply";
 import JobDetails from "../pages/JobDetails/JobDetails";
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         {
           path: '/addJob',
           element: <PrivetRoute><AddJob></AddJob></PrivetRoute>
+        },
+        {
+          path: '/allJob',
+          element: <AllJob></AllJob>
         },
         {
           path: '/myPostedJobs',

@@ -17,6 +17,7 @@ const Navbar = () => {
     const links = <>
         <div className='space-x-2'>
             <NavLink to='/'>Home</NavLink>
+            <NavLink to='/allJob'>All Job</NavLink>
             <NavLink to='/myApplications'>My Application</NavLink>
             <NavLink to='/addJob'>Add Job</NavLink>
             <NavLink to='/myPostedJobs'>My Posted Job</NavLink>

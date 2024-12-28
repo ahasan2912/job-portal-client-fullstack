@@ -9,7 +9,7 @@ const AddJob = () => {
         const formData = new FormData(e.target);
         const initialData = Object.fromEntries(formData.entries());
         const { min, max, currency, ...newJob } = initialData;
-        newJob.salaryRange = { min, max, currency }; //object
+        newJob.salaryRange = { min: parseInt(min), max: parseInt(max), currency }; //object
         newJob.requirements = newJob.requirements.split('\n');
         newJob.responsibilities = newJob.responsibilities.split('\n');
 
@@ -78,10 +78,10 @@ const AddJob = () => {
                             <label className="label">
                                 <span className="label-text">Salary Range</span>
                             </label>
-                            <input type="text" name='max' placeholder="Max" className="input input-bordered" required />
+                            <input type="number" name='max' placeholder="Max" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
-                            <input type="text" name='min' placeholder="Min" className="input input-bordered" required />
+                            <input type="number" name='min' placeholder="Min" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <select name='currency' defaultValue={'Currency'} className="select select-ghost w-full input-bordered">
@@ -132,14 +132,14 @@ const AddJob = () => {
                         <label className="label">
                             <span className="label-text">HR Email</span>
                         </label>
-                        <input type="email" name='hr_email' placeholder="HR Email" className="input input-bordered" defaultValue={user?.email} required />
+                        <input type="email" name='hr_email' placeholder="HR Email" className="input input-bordered" defaultValue={user?.email} readOnly required />
                     </div>
                     {/* Application dateline */}
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Dadeline</span>
                         </label>
-                        <input type="date" name='applicationDeadline' placeholder="Dadeline" className="input input-bordered" defaultValue={user?.email} required />
+                        <input type="date" name='applicationDeadline' placeholder="Dadeline" className="input input-bordered" required />
                     </div>
                     {/* Company Logo URL */}
                     <div className="form-control">
