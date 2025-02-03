@@ -1,5 +1,5 @@
 import {
-    createBrowserRouter,
+  createBrowserRouter,
 } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import AddJob from "../pages/AddJob/AddJob";
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         {
           path: '/jobs/:id',
           element: <PrivetRoute><JobDetails></JobDetails></PrivetRoute>,
-          loader: ({params}) => fetch(`https://job-portal-application-eta.vercel.app/jobs/${params.id}`)
+          loader: ({params}) => fetch(`https://job-application-server-lilac.vercel.app/jobs/${params.id}`)
         },
         {
           path: '/jobApply/:id',
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         {
           path: '/viewApplications/:job_id',
           element: <PrivetRoute><ViewApplication></ViewApplication></PrivetRoute>,
-          loader: ({params}) => fetch(`https://job-portal-application-eta.vercel.app/job-application/jobs/${params.job_id}`)
+          loader: ({params}) => fetch(`https://job-application-server-lilac.vercel.app/job-application/jobs/${params.job_id}`)
         },
         {
             path: '/register',

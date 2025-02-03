@@ -8,12 +8,12 @@ const MyApplication = () => {
     const axiosSecure = useAxiosSecure();
 
     useEffect(() => {
-        /*  fetch(`https://job-portal-application-eta.vercel.app/job-application?email=${user.email}`)
+        /*  fetch(`https://job-application-server-lilac.vercel.app/job-application?email=${user.email}`)
              .then(res => res.json())
              .then(data => {
                  setJobs(data);
              }) */
-        /*  axios.get(`https://job-portal-application-eta.vercel.app/job-application?email=${user.email}`, { withCredentials: true })
+        /*  axios.get(`https://job-application-server-lilac.vercel.app/job-application?email=${user.email}`, { withCredentials: true })
              .then(res => setJobs(res.data)) */
 
         axiosSecure.get(`/job-application?email=${user.email}`)

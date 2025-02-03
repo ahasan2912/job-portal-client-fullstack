@@ -36,14 +36,14 @@ const AuthProvider = ({ children }) => {
 
             if (currentUser?.email) {
                 const user = {email: currentUser.email};
-                axios.post('https://job-portal-application-eta.vercel.app/jwt', user, {withCredentials: true})
+                axios.post('https://job-application-server-lilac.vercel.app/jwt', user, {withCredentials: true})
                 .then(res => {
                     // console.log(res.data);
                     setLoading(false);
                 })
             } 
             else{
-                axios.post('https://job-portal-application-eta.vercel.app/logout', {}, {withCredentials: true})
+                axios.post('https://job-application-server-lilac.vercel.app/logout', {}, {withCredentials: true})
                 .then(res => {
                     // console.log('LogOut',res.data);
                     setLoading(false);

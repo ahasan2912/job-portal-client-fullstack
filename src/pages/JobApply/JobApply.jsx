@@ -21,7 +21,7 @@ const JobApply = () => {
             github,
             resume
         }
-        fetch('https://job-portal-application-eta.vercel.app/job-application', {
+        fetch('https://job-application-server-lilac.vercel.app/job-application', {
             method: "POST",
             headers: {
                 'content-type' : 'application/json'

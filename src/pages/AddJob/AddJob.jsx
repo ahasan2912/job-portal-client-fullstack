@@ -13,7 +13,7 @@ const AddJob = () => {
         newJob.requirements = newJob.requirements.split('\n');
         newJob.responsibilities = newJob.responsibilities.split('\n');
 
-        fetch('https://job-portal-application-eta.vercel.app/jobs', {
+        fetch('https://job-application-server-lilac.vercel.app/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

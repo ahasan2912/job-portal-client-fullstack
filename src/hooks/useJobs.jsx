@@ -6,7 +6,7 @@ const useJobs = (sort,search,minSalary, maxSalary) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(()=> {
-        axios.get(`https://job-portal-application-eta.vercel.app/jobs?sort=${sort}&search=${search}&min=${minSalary}&max=${maxSalary}`).then((res) => {
+        axios.get(`https://job-application-server-lilac.vercel.app/jobs?sort=${sort}&search=${search}&min=${minSalary}&max=${maxSalary}`).then((res) => {
             setLoading(false);
             setJobs(res.data);
         })
